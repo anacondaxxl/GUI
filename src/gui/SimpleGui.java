@@ -35,7 +35,20 @@ public class SimpleGui implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         changeText();
-        changeColor ()
+        changeColor ();
+        moveCircle();
+    }
+
+    private void moveCircle() {
+        for (int x = 0; x <= 300; x++) {
+            panel.setXY (x, x);
+            window.repaint();
+            try {
+                Thread.sleep(10);
+
+            }catch (InterruptedException e)
+                e.printStackTrace();
+        }
     }
 
     private void changeColor() {
